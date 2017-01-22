@@ -1,0 +1,57 @@
+buildscript {
+    ext {
+        springBootVersion = '1.4.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+plugins {
+    id 'com.gorylenko.gradle-git-properties' version '1.4.17'
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = 'luigi.LuigiApplication'
+
+springBoot  {
+    buildInfo()
+}
+processResources {
+    expand(project.properties)
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-hateoas'
+    compile 'org.springframework.boot:spring-boot-actuator-docs'
+    compile 'org.springframework.boot:spring-boot-devtools'
+    compile 'org.springframework.data:spring-data-rest-hal-browser'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+
+task cleanAll {
+    dependsOn clean, cleanIdea, cleanIdeaWorkspace
+    doLast {
+        delete 'out', 'logs'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
