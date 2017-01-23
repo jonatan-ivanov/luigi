@@ -13,6 +13,7 @@ plugins {
     id 'com.gorylenko.gradle-git-properties' version '1.4.17'
     id 'nebula.gradle-git-scm' version '3.0.1'
     id 'nebula.dependency-lock' version '2.2.4'
+    id 'nebula.release' version '4.1.1'
 }
 
 apply plugin: 'java'
