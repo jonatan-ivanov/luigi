@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.4.3.RELEASE'
+        springBootVersion = '1.+'
     }
     repositories {
         mavenCentral()
@@ -11,6 +11,8 @@ buildscript {
 }
 plugins {
     id 'com.gorylenko.gradle-git-properties' version '1.4.17'
+    id 'nebula.gradle-git-scm' version '3.0.1'
+    id 'nebula.dependency-lock' version '2.2.4'
 }
 
 apply plugin: 'java'
