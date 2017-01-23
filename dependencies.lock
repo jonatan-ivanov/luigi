@@ -1,0 +1,9 @@
+{
+  "org.springframework.boot:spring-boot-actuator-docs": { "locked": "1.4.3.RELEASE" },
+  "org.springframework.boot:spring-boot-devtools": { "locked": "1.4.3.RELEASE" },
+  "org.springframework.boot:spring-boot-starter-actuator": { "locked": "1.4.3.RELEASE" },
+  "org.springframework.boot:spring-boot-starter-hateoas": { "locked": "1.4.3.RELEASE" },
+  "org.springframework.boot:spring-boot-starter-test": { "locked": "1.4.3.RELEASE" },
+  "org.springframework.boot:spring-boot-starter-web": { "locked": "1.4.3.RELEASE" },
+  "org.springframework.data:spring-data-rest-hal-browser": { "locked": "2.5.6.RELEASE" }
+}
